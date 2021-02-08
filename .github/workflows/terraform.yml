@@ -48,6 +48,7 @@ jobs:
 
             \`\`\`${process.env.PLAN}\`\`\`
             </details>
+
             *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
 
             github.issues.createComment({
