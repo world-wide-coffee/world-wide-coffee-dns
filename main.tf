@@ -6,7 +6,7 @@ terraform {
   }
 
   backend "remote" {
-   organization = "world-wide-coffee"
+    organization = "world-wide-coffee"
 
     workspaces {
       name = "world-wide-coffee-dns"
@@ -14,9 +14,8 @@ terraform {
   }
 }
 
-
 variable "google_credentials" {
-  type = string
+  type        = string
   description = "The Google Cloud Platform Credentials to be used to manage resources."
 }
 
