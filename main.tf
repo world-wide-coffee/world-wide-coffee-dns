@@ -37,5 +37,5 @@ resource "google_dns_record_set" "developer" {
 
   managed_zone = data.google_dns_managed_zone.root.name
 
-  rrdatas = ["test"]
+  rrdatas = ["test-2"]
 }
