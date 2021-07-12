@@ -13,6 +13,7 @@ resource "google_dns_managed_zone" "root" {
       key_type   = "keySigning"
       kind       = "dns#dnsKeySpec"
     }
+
     default_key_specs {
       algorithm  = "rsasha256"
       key_length = 1024
@@ -20,14 +21,4 @@ resource "google_dns_managed_zone" "root" {
       kind       = "dns#dnsKeySpec"
     }
   }
-}
-
-resource "google_dns_record_set" "developer" {
-  name = "developer.${google_dns_managed_zone.root.dns_name}"
-  type = "TXT"
-  ttl  = 300
-
-  managed_zone = google_dns_managed_zone.root.name
-
-  rrdatas = ["test"]
 }
